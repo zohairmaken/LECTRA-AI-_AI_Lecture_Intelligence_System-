@@ -1,0 +1,90 @@
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+bin/
+lib/
+include/
+
+# Node.js / Frontend
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+out/
+build/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+
+# Python compiled files
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environment files
+.env
+.env.test
+.env.production
+.env.local
+.env.*.local
+*.env
+
+# SQLite Databases & SQL
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Vector DB & Cache
+backend/chroma_db/
+backend/tmp_model/
+backend/uploads/
+
+# Media / Audio Temp Files
+backend/*.wav
+backend/*.mp3
+backend/*.mp4
+backend/*.png
+backend/*.jpg
+backend/*.jpeg
+backend/*.mkv
+
+# Log Files
+*.log
+backend/login_debug.log
+backend/pipeline_debug.log
+backend/crash_report.log
+backend/startup_error.txt
+backend/backend.log
+backend/backend_err.log
+backend.log
+backend_err.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# System / OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    container_name: lectra_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://user:password@db:5432/lectra_db
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - HF_TOKEN=${HF_TOKEN}
+    volumes:
+      - ./uploads:/app/uploads
+      - ./chroma_db:/app/chroma_db
+    depends_on:
+      - db
+    networks:
+      - lectra-network
+
+  db:
+    image: postgres:15-alpine
+    container_name: lectra_db
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=lectra_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - lectra-network
+
+networks:
+  lectra-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

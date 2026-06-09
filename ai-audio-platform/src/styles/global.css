@@ -1,0 +1,178 @@
+/* Global CSS - lectra-AI */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import './variables.css';
+
+:root {
+  /* Font Family definitions are kept here */
+  --font-family-display: 'Outfit', sans-serif;
+  --font-family-body: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  font-family: var(--font-family-body);
+  font-size: 16px; /* Professional standard */
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Typography Refinement */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-display);
+  color: var(--text-primary);
+  font-weight: 800;
+  letter-spacing: -0.02em; /* Tighter for professional feel */
+  margin: 0;
+  text-transform: none; /* Removed all-caps by default */
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary) !important;
+}
+
+p,
+span,
+li,
+label,
+div,
+small {
+  color: var(--text-secondary);
+}
+
+strong,
+b {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Inputs & Forms */
+input,
+textarea,
+select {
+  font-family: var(--font-family-body);
+  font-size: 0.95rem;
+  background: var(--surface-card);
+  border: 1px solid var(--surface-border);
+  color: var(--text-primary);
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-sm);
+  outline: none;
+  transition: var(--transition-speed);
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--accent-primary);
+  background: var(--background-color);
+}
+
+::placeholder {
+  color: var(--text-muted);
+}
+
+/* Utilities */
+.glass-panel {
+  background: var(--surface-panel);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-glow);
+  padding: 2.5rem;
+  transition: var(--transition-speed);
+}
+
+.glass-panel:hover {
+  border-color: var(--surface-border-active);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Custom Scrollbar - Refined */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface-border);
+  border-radius: 10px;
+  border: 2px solid var(--background-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
