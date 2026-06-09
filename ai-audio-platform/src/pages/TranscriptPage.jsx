@@ -207,7 +207,6 @@ const TranscriptPage = () => {
                                 {/* TAB: TRANSCRIPT */}
                                 {activeTab === 'transcript' && (
                                     <div>
-                                    <div>
                                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3.5rem' }}>
                                             <h2 style={{ fontSize: '1.5rem', fontWeight: '800' }}>Lecture Transcription</h2>
                                             <div style={{ display: 'flex', gap: '1rem' }}>
@@ -237,7 +236,6 @@ const TranscriptPage = () => {
                                 {/* TAB: DIARIZATION */}
                                 {activeTab === 'diarization' && (
                                     <div>
-                                    <div>
                                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3.5rem' }}>
                                             <h2 style={{ fontSize: '1.5rem', fontWeight: '800' }}>Speaker Highlights</h2>
                                             <button style={actionButtonStyle}>
@@ -266,7 +264,6 @@ const TranscriptPage = () => {
                                         
                                         <div style={{ maxWidth: '400px', margin: '0 auto' }}>
                                             <div style={{ marginBottom: '2.5rem', textAlign: 'left' }}>
-                                            <div style={{ marginBottom: '2.5rem', textAlign: 'left' }}>
                                                 <label style={{ fontSize: '0.75rem', fontWeight: '700', opacity: 0.5, display: 'block', marginBottom: '1rem' }}>Questions Count</label>
                                                 <input 
                                                     type="number" 
@@ -274,7 +271,6 @@ const TranscriptPage = () => {
                                                     onChange={(e) => setNumMCQs(e.target.value)}
                                                     style={{ width: '100%', padding: '1rem', background: 'var(--background-color)', border: '1px solid var(--surface-border)', borderRadius: '12px', color: 'var(--text-primary)', fontSize: '1.25rem', fontWeight: '700', textAlign: 'center' }}
                                                 />
-                                            </div>
                                             </div>
                                             <button 
                                                 onClick={() => navigate(`/quiz/${id}?n=${numMCQs}`)}
